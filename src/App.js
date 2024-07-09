@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import logo from "./logo.svg";
+import "./App.css";
+import AccordionSingleSelect from "./components/accordionSingleSelect";
+import AccordionMultiSelect from "./components/accordianMultiSelect";
+import RandomColor from "./components/randomColor";
+import StarRating from "./components/starRating";
+import ImageSlider from "./components/imageSlider";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ImageSlider url={'https://picsum.photos/v2/list'} page={'1'} limit={'10'} />
+      <StarRating noOfStars={10} />
+      <RandomColor />
+      <AccordionMultiSelect />
+      <AccordionSingleSelect />
     </div>
   );
 }

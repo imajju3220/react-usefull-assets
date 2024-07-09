@@ -1,0 +1,16 @@
+.item{
+    background-color: blueviolet;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.title{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{
+    color: #fff;
+}
