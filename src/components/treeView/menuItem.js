@@ -17,7 +17,9 @@ export default function MenuItem({ item }) {
       <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
       <p>{item.label}</p>
       {
-        item && item.children && item.children.length ? <span onClick={()=>handleToggleChildren(item.label)}>+</span> : null
+        item && item.children && item.children.length ? <span onClick={()=>handleToggleChildren(item.label)}>
+            {displayCurrentChildren[item.label]? '-' : '+'}
+        </span> : null
       }
       </div>
       {item && item.children && item.children.length > 0 && displayCurrentChildren[item.label] ? (
