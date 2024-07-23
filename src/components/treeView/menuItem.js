@@ -8,16 +8,16 @@ export default function MenuItem({ item }) {
     function handleToggleChildren(getCurrentLabel){
         setDisplayCurrentChildren({
             ...displayCurrentChildren,
-            [getCurrentLabel]: !displayCurrentChildren 
+            [getCurrentLabel]: !displayCurrentChildren[getCurrentLabel] 
         })
     }
-    console.log("object", displayCurrentChildren);
+    console.log("displayCurrentChildren", displayCurrentChildren);
   return (
     <li>
       <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
       <p>{item.label}</p>
       {
-        item && item.children && item.children.length ? <span onClick={()=>handleToggleChildren(item.label)}>
+        item && item.children && item.children.length ? <span style={{fontWeight:'bold', padding:'2px 8px'}} onClick={()=>handleToggleChildren(item.label)}>
             {displayCurrentChildren[item.label]? '-' : '+'}
         </span> : null
       }
